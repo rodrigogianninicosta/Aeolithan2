@@ -3,6 +3,7 @@ import './style.css'
 import './char.css'
 import CharIcon from './CharIcon'
 import SideBar from './SideBar'
+import CharInformation from './CharInformation'
 
 export default function CharCard(props) {
   const [showDiv, setShowDiv] = useState(false)
@@ -11,7 +12,7 @@ export default function CharCard(props) {
       <div className={`char-card ${props.character}`}>
         <div className="background">
           <img
-            src={`/images/background/${props.character}.jpg`}
+            src={`/images/background/${props.character}.gif`}
             alt="background"
           />
         </div>
@@ -20,9 +21,9 @@ export default function CharCard(props) {
         </div>
         <CharIcon />,
         <div className="char">
-          <img src={`/images/character/${props.character}.png`} alt="char" />
+          <img src={`/images/character/${props.character}.gif`} alt="char" />
         </div>
-        <div className={`black-div ${showDiv ? 'show' : ''}`} />
+        <CharInformation showDiv={showDiv} />,
       </div>
       <SideBar onButtonClick={() => setShowDiv(!showDiv)} />
     </div>

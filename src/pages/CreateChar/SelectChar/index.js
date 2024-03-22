@@ -7,9 +7,9 @@ import Subtitle from '../../../components/Subtitle'
 
 export default function SelectChar() {
   const Core = () => [
-    <CharCard character={'mago'} />,
-    <CharCard character={'mago'} />,
-    <CharCard character={'mago'} />,
+    <CharCard character={'guerreiro3'} />,
+    <CharCard character={'guerreiro3'} />,
+    <CharCard character={'guerreiro3'} />,
   ]
 
   return (
