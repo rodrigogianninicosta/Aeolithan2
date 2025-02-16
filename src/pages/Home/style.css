@@ -1,17 +1,8 @@
-.start-menu {
-  height: 100%;
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .start {
   width: 35%;
   height: 100%;
-  padding-top: 10%;
-  padding-bottom: 8%;
+  padding-top: 15%;
+  padding-bottom: 5%;
 
   display: flex;
   align-items: center;
@@ -19,7 +10,7 @@
 }
 
 .start div {
-  width: 70%;
-  height: 18%;
+  width: 65%;
+  min-height: 15%;
   margin-bottom: 5%;
 }

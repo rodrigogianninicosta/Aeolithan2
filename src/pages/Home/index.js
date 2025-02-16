@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 import './style.css'
+import Title from '../../components/Title'
 
 export default function Home() {
   const navigate = useNavigate()
 
   return (
-    <div className="start-menu">
+    <div className="main-div">
+      <Title />
       <div className="start">
         <div className="div">
           <label>Iniciar Aventura</label>
@@ -18,6 +20,9 @@ export default function Home() {
         </div>
         <div className="div">
           <label>Alterar Mundo</label>
+        </div>
+        <div className="div" onClick={() => navigate('/')}>
+          <label>Voltar</label>
         </div>
       </div>
     </div>

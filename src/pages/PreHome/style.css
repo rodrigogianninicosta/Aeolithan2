@@ -1,5 +1,16 @@
-.pre-home {
-  padding-top: 20%;
+.pre-home {background: red;
+  width: 35%;
+  height: 100%;
+  padding-top: 15%;
+  padding-bottom: 5%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pre-home label {
+  font-size: 1.30em;
 }
 
 .pre-home label:hover {
