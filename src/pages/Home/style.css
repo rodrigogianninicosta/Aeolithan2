@@ -1,16 +1,16 @@
 .start {
-  width: 35%;
-  height: 100%;
-  padding-top: 15%;
-  padding-bottom: 5%;
+  width: 25%;
+  height: 100vh; 
+  padding: 10% 0 5% 0;
 
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .start div {
-  width: 65%;
+  width: 100%;
   min-height: 15%;
-  margin-bottom: 5%;
+
 }

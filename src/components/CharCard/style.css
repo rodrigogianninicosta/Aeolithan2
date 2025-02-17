@@ -1,10 +1,9 @@
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 28%;
+.wrapper { 
+  width: 21%;
   height: 100%;
-  padding: 0.8%;
-  padding-right: 0%;
+  padding: 0.25%;
+  border-radius: 10px;
+
   box-shadow: 0px 0px 5px 1px gold;
   background: linear-gradient(-135deg, purple, darkgoldenrod);
   animation: gradient 3s ease infinite;
@@ -34,10 +33,17 @@
 
 .background {
   z-index: 1;
+  border-radius: 10px;
 }
 
 .char {
   z-index: 2;
+}
+
+.frame {
+  display: flex;
+  align-items: center;
+  z-index: -1;
 }
 
 .background img {
@@ -46,29 +52,8 @@
   object-fit: cover;
 }
 
-.frame {
-  display: flex;
-  align-items: center;
-  z-index: 3;
-}
-
 .frame img {
   width: 100%;
   height: 140%;
   object-fit: cover;
-}
-
-.black-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: 4;
-  display: none;
-}
-
-.black-div.show {
-  display: block;
 }

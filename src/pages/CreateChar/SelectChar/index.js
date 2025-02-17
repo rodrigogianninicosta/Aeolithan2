@@ -10,6 +10,7 @@ export default function SelectChar() {
     <CharCard character={'guerreiro3'} />,
     <CharCard character={'guerreiro3'} />,
     <CharCard character={'guerreiro3'} />,
+    <CharCard character={'guerreiro3'} />,
   ]
 
   return (
