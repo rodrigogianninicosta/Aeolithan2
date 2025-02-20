@@ -5,11 +5,11 @@ export default function Button(props) {
   const navigate = useNavigate()
 
   const before = () => {
-    navigate('/home')
+    navigate(props.before)
   }
 
   const after = () => {
-    navigate('/createChar/selectChar')
+    navigate(props.after)
   }
 
   return (

@@ -1,0 +1,23 @@
+.confirm-char {
+  width: 22%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+ 
+  padding-bottom: 1%;
+}
+
+.confirm-char .wrapper {
+  width: 100%;
+}
+
+.confirm-char .wrapper,.wrapper:hover,.wrapper:focus {
+  cursor:auto;
+  background: linear-gradient(-135deg, white, gold);
+  animation: gradient 1s ease infinite;
+  background-size: 400% 400%;
+  box-shadow: 0px 0px 5px 2px gold;
+}

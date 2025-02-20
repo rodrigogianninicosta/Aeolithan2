@@ -7,19 +7,22 @@ import Subtitle from '../../../components/Subtitle'
 
 export default function SelectChar() {
   const Core = () => [
-    <CharCard character={'guerreiro3'} />,
-    <CharCard character={'guerreiro3'} />,
-    <CharCard character={'guerreiro3'} />,
-    <CharCard character={'guerreiro3'} />,
+    <CharCard character={'guerreiro3'} name={'guerreiro'} />,
+    <CharCard character={'guerreiro3'} name={'guerreiro'} />,
+    <CharCard character={'guerreiro3'} name={'guerreiro'} />,
+    <CharCard character={'guerreiro3'} name={'guerreiro'} />,
   ]
 
   return (
-    <div className="main-div createchar">
+    <div className="main-div">
       <Subtitle message={'Selecione o seu personagem'} />
       <div className="select-char">
         <PutArrows Core={Core} />
       </div>
-      <Button />
+      <Button 
+        before={'/home'}
+        after={'/createChar/writeName'}
+      />
     </div>
   )
 }
