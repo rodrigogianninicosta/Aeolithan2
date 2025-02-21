@@ -11,7 +11,7 @@ export default function CharCard(props) {
       <div className={`char-card ${props.character}`}>
         <div className="background">
           <img
-            src={`/images/background/${props.character}.gif`}
+            src={`/images/background/${props.character}.jpg`}
             alt="background"
           />
         </div>
@@ -19,7 +19,7 @@ export default function CharCard(props) {
           <img src={`/images/frame/darkCard3.png`} alt="frame" />
         </div>
         <div className="char">
-          <img src={`/images/character/${props.character}.gif`} alt="char" />
+          <img src={`/images/character/${props.character}.png`} alt="char" />
         </div>
         <div className="description">
           <div className="name">

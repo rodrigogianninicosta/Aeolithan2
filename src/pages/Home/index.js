@@ -6,7 +6,7 @@ export default function Home() {
   const navigate = useNavigate()
 
   return (
-    <div className="main-div">
+    <div className="main-div main-title">
       <Title />
       <div className="start">
         <div className="div">

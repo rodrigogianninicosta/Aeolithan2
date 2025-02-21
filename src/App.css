@@ -63,7 +63,7 @@ label {
 
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: 0rem;
 }
 
 .div {
@@ -99,4 +99,8 @@ label {
     hue-rotate(356deg) brightness(102%) contrast(105%);
   opacity: 0.8;
   animation: shake 0s infinite;
+}
+
+.main-title .title label {
+  font-size: 12rem !important;
 }

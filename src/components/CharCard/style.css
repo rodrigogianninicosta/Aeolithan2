@@ -76,12 +76,16 @@
 
 .description {
   z-index: 3;
+  align-items: start;
 }
 
 .name {
   width: 100%;
   background: rgba(0, 0, 0, 0.3); 
   height: 10%;
+
+  border-start-end-radius: 10px;
+  border-start-start-radius: 10px;
 
   display: flex;
   align-items: center;

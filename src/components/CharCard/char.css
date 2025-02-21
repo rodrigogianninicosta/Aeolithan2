@@ -1,13 +1,12 @@
 .guerreiro .char img {
-  height: 70%;
+  height: 60%;
 }
 
 .mago .char img {
-  height: 65%;
+  height: 52%;
+  margin-bottom: 1%;
 }
 
-.guerreiro3 .char img {
-  margin-bottom: 25%;
-  height: 55%;
-  width: 90%;
+.ladino .char img {
+  height: 60%;
 }

@@ -6,7 +6,7 @@ export default function PreHome() {
   const navigate = useNavigate()
 
   return (
-    <div className="main-div">
+    <div className="main-div main-title">
       <Title />
       <div className="pre-home">
         <label onClick={() => navigate('/home')}>Clique para iniciar</label>

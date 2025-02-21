@@ -16,6 +16,6 @@
   animation-delay: calc(.2s * var(--i));
 
   -webkit-text-stroke: 0.2px purple;   
-  font-size: 12rem;
+  font-size: 6rem;
   letter-spacing: 0.9rem;
 }
