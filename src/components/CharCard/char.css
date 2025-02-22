@@ -1,12 +1,33 @@
-.guerreiro .char img {
-  height: 60%;
+.guerreiro1 .char img {
+  height: 70%;
 }
 
-.mago .char img {
-  height: 52%;
-  margin-bottom: 1%;
+.mago1 .char img {
+  min-height: 57%;
+}
+.mago2 .char img {
+  min-height: 75%;
 }
 
-.ladino .char img {
-  height: 60%;
+.ladino1 .char img {
+  height: 65%;
+}
+
+.piromante1 .char img {
+  min-height: 63%;
+}
+.piromante2 .char img {
+  min-height: 73%;
+}
+
+.amaldicoado1 .char img {
+  min-height: 55%;
+}
+.amaldicoado2 .char img {
+  min-height: 80%;
+  width: 130%;
+}
+
+.infectado1 .char img {
+  min-height: 70%;
 }
