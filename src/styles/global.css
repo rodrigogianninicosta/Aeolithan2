@@ -1,0 +1,27 @@
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainscreen {
+  height: 100vh;
+  width: 100%;
+  background: black;
+  background-image: url('../../public/images/background/background.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.icon {
+  height: 5vh;
+  transition: 0.3s;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(38%) saturate(4816%)
+    hue-rotate(356deg) brightness(102%) contrast(105%);
+  opacity: 0.8;
+  animation: shake 0s infinite;
+}
+
+.main-title .title label {
+  font-size: 12rem;
+}

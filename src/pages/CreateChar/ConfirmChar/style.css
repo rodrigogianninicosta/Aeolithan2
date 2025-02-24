@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
- 
+
   padding-bottom: 1%;
 }
 
@@ -14,9 +14,11 @@
   width: 100%;
 }
 
-.confirm-char .wrapper,.wrapper:hover,.wrapper:focus {
-  cursor:auto;
-  background: linear-gradient(-135deg, white, gold);
+.confirm-char2 .wrapper,
+.wrapper2:hover,
+.wrapper2:focus {
+  cursor: auto;
+  background: var(--shiny-color);
   animation: gradient 1s ease infinite;
   background-size: 400% 400%;
   box-shadow: 0px 0px 5px 2px gold;

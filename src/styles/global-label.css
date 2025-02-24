@@ -1,0 +1,17 @@
+@import url('http://fonts.cdnfonts.com/css/nightmare-pills');
+
+label {
+  color: var(--silver-color);
+  font-family: 'NIGHTMARE PILLS', sans-serif;
+  font-size: 0.95em;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+  animation: shake 1s infinite;
+}
+
+.div:hover label {
+  cursor: pointer;
+  font-size: 0.85em;
+  -webkit-text-stroke: 0.3px var(--silver-color);
+}

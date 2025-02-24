@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './style.css'
 import './char.css'
+import CharDescription from './CharDescription'
 
 export default function CharCard(props) {
   const [evolution, setEvolution] = useState(1)
@@ -30,34 +31,7 @@ export default function CharCard(props) {
             alt="char"
           />
         </div>
-        <div className="description">
-          <div className="name">
-            <label>{props.name}</label>
-          </div>
-          <div className="evolution">
-            <label
-              onClick={() => {
-                setEvolution(1)
-              }}
-            >
-              1º
-            </label>
-            <label
-              onClick={() => {
-                setEvolution(2)
-              }}
-            >
-              2º
-            </label>
-            <label
-              onClick={() => {
-                setEvolution(3)
-              }}
-            >
-              3º
-            </label>
-          </div>
-        </div>
+        <CharDescription setEvolution={setEvolution} name={props.name} />
       </div>
     </button>
   )

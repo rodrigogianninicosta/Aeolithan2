@@ -12,14 +12,15 @@ export default function SelectChar() {
     { character: 'ladino', name: 'ladino' },
     { character: 'piromante', name: 'piromante' },
     { character: 'amaldicoado', name: 'amaldicoado' },
+    { character: 'goblin', name: 'goblin' },
     { character: 'infectado', name: 'infectado' },
   ]
 
   const [startIndex, setStartIndex] = useState(0)
-  const visibleCharacters = characters.slice(startIndex, startIndex + 4)
+  const visibleCharacters = characters.slice(startIndex, startIndex + 3)
 
   const next = () => {
-    if (startIndex + 4 < characters.length) {
+    if (startIndex + 3 < characters.length) {
       setStartIndex(startIndex + 1)
     }
   }

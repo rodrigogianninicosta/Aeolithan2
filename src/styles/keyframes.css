@@ -1,0 +1,66 @@
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake-soft {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-0.5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    background: var(--dark-blue-color);
+  }
+  50% {
+    background: var(--dark-blue-hover-color);
+  }
+  100% {
+    background: var(--dark-blue-color);
+  }
+}

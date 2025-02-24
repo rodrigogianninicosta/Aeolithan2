@@ -4,7 +4,11 @@ import Home from './pages/Home'
 import SelectChar from './pages/CreateChar/SelectChar'
 import WriteName from './pages/CreateChar/WriteName'
 import ConfirmName from './pages/CreateChar/ConfirmChar'
-import './App.css'
+import './styles/colors.css'
+import './styles/global-div.css'
+import './styles/global-label.css'
+import './styles/global.css'
+import './styles/keyframes.css'
 
 export default function App() {
   return (

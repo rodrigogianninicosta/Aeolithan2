@@ -2,11 +2,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2%;
 }
 
 .arrow img,
 .arrow img:hover {
-  height: 9.5vh;
+  height: 12vh;
   cursor: pointer;
 }

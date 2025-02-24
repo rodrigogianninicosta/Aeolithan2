@@ -3,10 +3,10 @@
 }
 
 .mago1 .char img {
-  min-height: 57%;
+  height: 57%;
 }
 .mago2 .char img {
-  min-height: 75%;
+  height: 80%;
 }
 
 .ladino1 .char img {
@@ -14,20 +14,29 @@
 }
 
 .piromante1 .char img {
-  min-height: 63%;
+  height: 60%;
 }
 .piromante2 .char img {
-  min-height: 73%;
+  height: 73%;
 }
 
 .amaldicoado1 .char img {
-  min-height: 55%;
+  height: 50%;
 }
 .amaldicoado2 .char img {
-  min-height: 80%;
-  width: 130%;
+  height: 80%;
+  width: 140%;
+}
+
+.goblin1 .char img {
+  height: 60%;
+  width: 100%;
+}
+.goblin2 .char img {
+  height: 85%;
+  width: 120%;
 }
 
 .infectado1 .char img {
-  min-height: 70%;
+  height: 70%;
 }

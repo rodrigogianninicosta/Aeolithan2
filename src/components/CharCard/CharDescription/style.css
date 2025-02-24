@@ -1,0 +1,41 @@
+.description {
+  z-index: 3;
+  display: flex;
+  align-items: flex-start;
+
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.name {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  height: 10%;
+
+  border-start-end-radius: 10px;
+  border-start-start-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evolution {
+  width: 100%;
+  height: 10%;
+
+  border-start-end-radius: 10px;
+  border-start-start-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+}
+
+.evolution label {
+  font-family: sans-serif;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
