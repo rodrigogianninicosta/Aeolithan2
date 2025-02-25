@@ -2,8 +2,8 @@
   height: 60%;
 }
 .guerreiro2 .char img {
-  height: 75%;
-  width: 120%;
+  height: 80%;
+  width: 135%;
 }
 
 .mago1 .char img {
@@ -46,4 +46,7 @@
 
 .infectado1 .char img {
   height: 70%;
+}
+.infectado2 .char img {
+  height: 75%;
 }
