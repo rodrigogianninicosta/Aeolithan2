@@ -1,25 +1,44 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './style.css'
 import './char.css'
 import CharDescription from './CharDescription'
 
 export default function CharCard(props) {
   const [evolution, setEvolution] = useState(1)
+  const [loaded, setLoaded] = useState(false)
+
+  // Pré-carrega as imagens de ambas as evoluções
+  useEffect(() => {
+    const evolutions = [1, 2] // ajuste se houver mais evoluções
+    evolutions.forEach((evo) => {
+      const bgImage = new Image()
+      bgImage.src = `/images/background/${props.character + evo}.jpg`
+      const charImage = new Image()
+      charImage.src = `/images/character/${props.character + evo}.png`
+    })
+  }, [props.character])
+
+  // Reseta o estado de carregamento quando a evolução muda
+  useEffect(() => {
+    setLoaded(false)
+  }, [evolution])
+
   const clickFunction = () => {
     localStorage.setItem('char', props.character)
   }
+
   return (
-    <button
-      className="wrapper"
-      onClick={() => {
-        clickFunction()
-      }}
-    >
+    <button className="wrapper" onClick={clickFunction}>
       <div className={`char-card ${props.character + evolution}`}>
         <div className="background">
           <img
             src={`/images/background/${props.character + evolution}.jpg`}
             alt="background"
+            onLoad={() => setLoaded(true)}
+            style={{
+              opacity: loaded ? 1 : 0,
+              transition: 'opacity 0s ease-in-out',
+            }}
           />
         </div>
         <div className="frame">
@@ -29,6 +48,11 @@ export default function CharCard(props) {
           <img
             src={`/images/character/${props.character + evolution}.png`}
             alt="char"
+            onLoad={() => setLoaded(true)}
+            style={{
+              opacity: loaded ? 1 : 0,
+              transition: 'opacity 0s ease-in-out',
+            }}
           />
         </div>
         <CharDescription setEvolution={setEvolution} name={props.name} />

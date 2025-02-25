@@ -14,14 +14,12 @@
 }
 
 .icon {
-  height: 5vh;
   transition: 0.3s;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(38%) saturate(4816%)
-    hue-rotate(356deg) brightness(102%) contrast(105%);
-  opacity: 0.8;
-  animation: shake 0s infinite;
+  filter: brightness(0) saturate(100%) invert(80%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(95%) contrast(95%);
 }
 
-.main-title .title label {
-  font-size: 12rem;
+.icon:hover {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(110%) contrast(95%);
 }

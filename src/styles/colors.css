@@ -3,6 +3,7 @@
   --dark-silver-color: #5b5b5b;
   --dark-blue-color: rgba(10, 15, 41, 0.8);
   --dark-blue-hover-color: rgba(10, 15, 41, 0.5);
+  --opacity-black-color: rgba(0, 0, 0, 0.5);
   --shiny-color: linear-gradient(
     -135deg,
     var(--dark-blue-color),
@@ -10,7 +11,10 @@
   );
   --shiny-hover-color: linear-gradient(
     -135deg,
-    var(--dark-silver-color),
-    var(--silver-color)
+    var(--dark-blue-color),
+    var(--silver-color),
+    var(--dark-blue-color),
+    var(--silver-color),
+    var(--dark-blue-color)
   );
 }

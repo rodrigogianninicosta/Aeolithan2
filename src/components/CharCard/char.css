@@ -1,16 +1,23 @@
 .guerreiro1 .char img {
-  height: 70%;
+  height: 60%;
+}
+.guerreiro2 .char img {
+  height: 75%;
+  width: 120%;
 }
 
 .mago1 .char img {
   height: 57%;
 }
 .mago2 .char img {
-  height: 80%;
+  height: 75%;
 }
 
 .ladino1 .char img {
-  height: 65%;
+  height: 60%;
+}
+.ladino2 .char img {
+  height: 70%;
 }
 
 .piromante1 .char img {
@@ -24,8 +31,8 @@
   height: 50%;
 }
 .amaldicoado2 .char img {
-  height: 80%;
-  width: 140%;
+  height: 75%;
+  width: 120%;
 }
 
 .goblin1 .char img {

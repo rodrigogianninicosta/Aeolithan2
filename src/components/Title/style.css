@@ -7,8 +7,12 @@
 .title label {
   display: inline-block;
   animation-delay: calc(0.2s * var(--i));
-  -webkit-text-stroke: 0.2px var(--dark-blue-color);
-  font-size: 6rem;
+  -webkit-text-stroke: 0.8px var(--dark-blue-color);
   letter-spacing: 0.9rem;
-  animation: flip 5s infinite;
+  animation: flip 3s infinite;
+  font-size: 6rem;
+}
+
+.main-title .title label {
+  font-size: min(11vw, 12rem);
 }

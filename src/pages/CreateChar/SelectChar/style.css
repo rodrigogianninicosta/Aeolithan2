@@ -6,4 +6,6 @@
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+
+  animation: shake-soft 0.8s infinite;
 }
