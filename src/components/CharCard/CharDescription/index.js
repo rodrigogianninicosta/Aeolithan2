@@ -1,20 +1,37 @@
+import React, { useState } from 'react'
 import './style.css'
 
 export default function CharDescription(props) {
+  const [selectedIcon, setSelectedIcon] = useState('')
+
+  const handleIconClick = (icon) => {
+    setSelectedIcon(selectedIcon === icon ? '' : icon)
+  }
+
+  const infoData = [
+    { label: 'id', value: props.id },
+    { label: 'posição', value: props.position },
+    { label: 'nome', value: props.name },
+    { label: 'classe', value: props.character },
+    { label: 'raça', value: props.race },
+    { label: 'level', value: props.level },
+    { label: 'exp', value: `${props.exp}/10` },
+  ]
+
   return (
     <div className="description">
       <div className="name">
         <label>{props.name}</label>
       </div>
       <div className="icon-bar">
-        <label className="icon">
-          <img src={`/images/icons/world.svg`} alt={'rookie'} />
+        <label className="icon" onClick={() => handleIconClick('world')}>
+          <img src={`/images/icons/world.svg`} alt={'world'} />
         </label>
-        <label className="icon">
-          <img src={`/images/icons/book.svg`} alt={'champion'} />
+        <label className="icon" onClick={() => handleIconClick('book')}>
+          <img src={`/images/icons/book.svg`} alt={'book'} />
         </label>
-        <label className="icon">
-          <img src={`/images/icons/search.svg`} alt={'champion'} />
+        <label className="icon" onClick={() => handleIconClick('search')}>
+          <img src={`/images/icons/search.svg`} alt={'search'} />
         </label>
       </div>
       <div className="evolution">
@@ -33,6 +50,26 @@ export default function CharDescription(props) {
           <img src={`/images/icons/champion.svg`} alt={'champion'} />
         </label>
       </div>
+      {selectedIcon === 'world' && (
+        <div className="world-div">
+          <p>This is the World Div</p>
+        </div>
+      )}
+      {selectedIcon === 'book' && (
+        <div className="book-div">
+          {infoData.map((item, index) => (
+            <div key={index}>
+              <label>{item.label + ':'}</label>
+              <label>{item.value}</label>
+            </div>
+          ))}
+        </div>
+      )}
+      {selectedIcon === 'search' && (
+        <div className="search-div">
+          <p>This is the Search Div</p>
+        </div>
+      )}
     </div>
   )
 }

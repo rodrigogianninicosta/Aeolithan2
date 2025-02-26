@@ -8,13 +8,13 @@ import Subtitle from '../../../components/Subtitle'
 export default function SelectChar() {
   const characters = useMemo(
     () => [
-      { character: 'guerreiro', name: 'guerreiro' },
-      { character: 'mago', name: 'mago' },
-      { character: 'ladino', name: 'ladino' },
-      { character: 'piromante', name: 'piromante' },
-      { character: 'amaldicoado', name: 'amaldicoado' },
-      { character: 'goblin', name: 'goblin' },
-      { character: 'infectado', name: 'infectado' },
+      { character: 'guerreiro', name: 'guerreiro', race: 'humano' },
+      { character: 'mago', name: 'mago', race: 'humano' },
+      { character: 'ladino', name: 'ladino', race: 'humano' },
+      { character: 'piromante', name: 'piromante', race: 'humano' },
+      { character: 'amaldicoado', name: 'amaldicoado', race: 'elfo' },
+      { character: 'batedor', name: 'batedor', race: 'goblin' },
+      { character: 'infectado', name: 'infectado', race: 'humano' },
     ],
     [],
   )

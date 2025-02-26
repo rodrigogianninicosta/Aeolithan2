@@ -7,9 +7,8 @@ export default function CharCard(props) {
   const [evolution, setEvolution] = useState(1)
   const [loaded, setLoaded] = useState(false)
 
-  // Pré-carrega as imagens de ambas as evoluções
   useEffect(() => {
-    const evolutions = [1, 2] // ajuste se houver mais evoluções
+    const evolutions = [1, 2]
     evolutions.forEach((evo) => {
       const bgImage = new Image()
       bgImage.src = `/images/background/${props.character + evo}.jpg`
@@ -18,7 +17,6 @@ export default function CharCard(props) {
     })
   }, [props.character])
 
-  // Reseta o estado de carregamento quando a evolução muda
   useEffect(() => {
     setLoaded(false)
   }, [evolution])
@@ -55,7 +53,17 @@ export default function CharCard(props) {
             }}
           />
         </div>
-        <CharDescription setEvolution={setEvolution} name={props.name} />
+        <CharDescription
+          setEvolution={setEvolution}
+          name={props.name}
+          key={props.character}
+          character={props.character}
+          race={props.race}
+          id={props.id}
+          position={props.position}
+          level={props.level}
+          exp={props.exp}
+        />
       </div>
     </button>
   )

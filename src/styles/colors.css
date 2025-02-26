@@ -4,6 +4,7 @@
   --dark-blue-color: rgba(10, 15, 41, 0.8);
   --dark-blue-hover-color: rgba(10, 15, 41, 0.5);
   --opacity-black-color: rgba(0, 0, 0, 0.5);
+  --less-opacity-black-color: rgba(0, 0, 0, 0.9);
   --shiny-color: linear-gradient(
     -135deg,
     var(--dark-blue-color),
