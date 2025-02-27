@@ -7,16 +7,7 @@ export default function PutArrows(props) {
       <img className="icon" src="/images/icons/arrow_left.svg" alt="before" />
     </div>,
     props.Core.map((char, index) => (
-      <CharCard
-        key={char.character}
-        character={char.character}
-        name={char.name}
-        race={char.race}
-        id={'?'}
-        position={index + 1}
-        level={'1'}
-        exp={'0'}
-      />
+      <CharCard key={char.character} id={'?'} level={'1'} exp={'0'} {...char} />
     )),
     <div key="right-arrow" className="arrow" onClick={props.next}>
       <img className="icon" src="/images/icons/arrow_right.svg" alt="after" />

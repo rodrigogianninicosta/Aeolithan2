@@ -21,6 +21,13 @@
   height: 70%;
 }
 
+.sacerdote1 .char img {
+  height: 65%;
+}
+.sacerdote2 .char img {
+  height: 68%;
+}
+
 .piromante1 .char img {
   height: 60%;
 }
@@ -28,10 +35,10 @@
   height: 73%;
 }
 
-.amaldicoado1 .char img {
+.lobisomem1 .char img {
   height: 50%;
 }
-.amaldicoado2 .char img {
+.lobisomem2 .char img {
   height: 75%;
   width: 120%;
 }
@@ -42,7 +49,7 @@
 }
 .batedor2 .char img {
   height: 85%;
-  width: 140%;
+  width: 130%;
   padding-right: 10%;
 }
 
@@ -50,5 +57,5 @@
   height: 70%;
 }
 .infectado2 .char img {
-  height: 75%;
+  height: 85%;
 }

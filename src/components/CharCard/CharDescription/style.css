@@ -71,7 +71,8 @@
 
 .world-div,
 .book-div,
-.search-div {
+.search-div,
+.power-div {
   width: 100%;
   height: 80%;
   margin-top: 0.3%;

@@ -53,17 +53,7 @@ export default function CharCard(props) {
             }}
           />
         </div>
-        <CharDescription
-          setEvolution={setEvolution}
-          name={props.name}
-          key={props.character}
-          character={props.character}
-          race={props.race}
-          id={props.id}
-          position={props.position}
-          level={props.level}
-          exp={props.exp}
-        />
+        <CharDescription setEvolution={setEvolution} {...props} />
       </div>
     </button>
   )

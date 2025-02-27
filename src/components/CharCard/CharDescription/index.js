@@ -18,6 +18,14 @@ export default function CharDescription(props) {
     { label: 'exp', value: `${props.exp}/10` },
   ]
 
+  const statusData = [
+    { label: 'health', value: props.health },
+    { label: 'attack', value: props.attack },
+    { label: 'magic', value: props.magic },
+    { label: 'defense', value: props.defense },
+    { label: 'speed', value: props.speed },
+  ]
+
   return (
     <div className="description">
       <div className="name">
@@ -32,6 +40,9 @@ export default function CharDescription(props) {
         </label>
         <label className="icon" onClick={() => handleIconClick('search')}>
           <img src={`/images/icons/search.svg`} alt={'search'} />
+        </label>
+        <label className="icon" onClick={() => handleIconClick('power')}>
+          <img src={`/images/icons/power.svg`} alt={'power'} />
         </label>
       </div>
       <div className="evolution">
@@ -66,8 +77,18 @@ export default function CharDescription(props) {
         </div>
       )}
       {selectedIcon === 'search' && (
-        <div className="search-div">
-          <p>This is the Search Div</p>
+        <div className="book-div">
+          {statusData.map((item, index) => (
+            <div key={index}>
+              <img src={`/images/icons/${item.label}.png`} alt={item.label} />
+              <label>{item.value}</label>
+            </div>
+          ))}
+        </div>
+      )}
+      {selectedIcon === 'power' && (
+        <div className="power-div">
+          <p>This is the power Div</p>
         </div>
       )}
     </div>
