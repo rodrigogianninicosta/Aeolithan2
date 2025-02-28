@@ -1,9 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import PreHome from './pages/PreHome'
 import Home from './pages/Home'
-import SelectChar from './pages/CreateChar/SelectChar'
-import WriteName from './pages/CreateChar/WriteName'
-import ConfirmName from './pages/CreateChar/ConfirmChar'
+import CreateChar from './pages/CreateChar'
 import './styles/colors.css'
 import './styles/global-div.css'
 import './styles/global-label.css'
@@ -31,26 +29,10 @@ export default function App() {
           }
         />
         <Route
-          path="/createChar/selectChar"
+          path="/createChar"
           element={
             <div className="mainscreen">
-              <SelectChar />
-            </div>
-          }
-        />
-        <Route
-          path="/createChar/writeName"
-          element={
-            <div className="mainscreen">
-              <WriteName />
-            </div>
-          }
-        />
-        <Route
-          path="/createChar/confirmChar"
-          element={
-            <div className="mainscreen">
-              <ConfirmName />
+              <CreateChar />
             </div>
           }
         />

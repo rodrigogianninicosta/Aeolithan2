@@ -28,7 +28,7 @@ export default function Button(props) {
           after()
         }}
       >
-        <label>Selecionar</label>
+        <label>Criar</label>
       </div>
     </div>
   )

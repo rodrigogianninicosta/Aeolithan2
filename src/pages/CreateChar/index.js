@@ -1,9 +1,9 @@
 import { useState, useEffect, useMemo } from 'react'
 import './style.css'
-import Button from '../../../components/Button'
-import PutArrows from '../../../components/PutArrows'
-import Title from '../../../components/Title'
-import Subtitle from '../../../components/Subtitle'
+import Button from '../../components/Button'
+import PutArrows from '../../components/PutArrows'
+import Title from '../../components/Title'
+import Subtitle from '../../components/Subtitle'
 
 export default function SelectChar() {
   const characters = useMemo(
