@@ -11,8 +11,8 @@ export default function CharDescription(props) {
   const infoData = [
     { label: 'id', value: props.id },
     { label: 'posição', value: props.position },
-    { label: 'nome', value: props.name },
-    { label: 'classe', value: props.character },
+    { label: 'nome', value: props.classType },
+    { label: 'classe', value: props.classType },
     { label: 'raça', value: props.race },
     { label: 'level', value: props.level },
     { label: 'exp', value: `${props.exp}/10` },
@@ -29,7 +29,7 @@ export default function CharDescription(props) {
   return (
     <div className="description">
       <div className="name">
-        <label>{props.name}</label>
+        <label>{props.classType}</label>
       </div>
       <div className="icon-bar">
         <label className="icon" onClick={() => handleIconClick('world')}>

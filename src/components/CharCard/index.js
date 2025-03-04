@@ -27,10 +27,10 @@ export default function CharCard(props) {
 
   return (
     <button className="wrapper" onClick={clickFunction}>
-      <div className={`char-card ${props.character + evolution}`}>
+      <div className={`char-card ${props.classType + evolution}`}>
         <div className="background">
           <img
-            src={`/images/background/${props.character + evolution}.jpg`}
+            src={`/images/background/${props.classType + evolution}.jpg`}
             alt="background"
             onLoad={() => setLoaded(true)}
             style={{
@@ -44,7 +44,7 @@ export default function CharCard(props) {
         </div>
         <div className="char">
           <img
-            src={`/images/character/${props.character + evolution}.png`}
+            src={`/images/character/${props.classType + evolution}.png`}
             alt="char"
             onLoad={() => setLoaded(true)}
             style={{
