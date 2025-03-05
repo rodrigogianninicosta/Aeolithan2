@@ -22,7 +22,7 @@ export default function CharCard(props) {
   }, [evolution])
 
   const clickFunction = () => {
-    localStorage.setItem('char', props.character)
+    localStorage.setItem('charInfo', JSON.stringify({ ...props }))
   }
 
   return (

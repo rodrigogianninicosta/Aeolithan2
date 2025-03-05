@@ -18,7 +18,7 @@
   height: 60%;
 }
 .ladino2 .char img {
-  height: 70%;
+  height: 75%;
 }
 
 .sacerdote1 .char img {
@@ -39,8 +39,22 @@
   height: 50%;
 }
 .lobisomem2 .char img {
-  height: 75%;
-  width: 120%;
+  height: 90%;
+  width: 140%;
+}
+
+.bobo1 .char img {
+  height: 70%;
+}
+.bobo2 .char img {
+  height: 70%;
+}
+
+.infectado1 .char img {
+  height: 70%;
+}
+.infectado2 .char img {
+  height: 85%;
 }
 
 .batedor1 .char img {
@@ -51,11 +65,4 @@
   height: 85%;
   width: 130%;
   padding-right: 10%;
-}
-
-.infectado1 .char img {
-  height: 70%;
-}
-.infectado2 .char img {
-  height: 85%;
 }

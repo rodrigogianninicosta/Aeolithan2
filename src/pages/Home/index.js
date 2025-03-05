@@ -15,7 +15,7 @@ export default function Home() {
         <div className="div" onClick={() => navigate('/createChar')}>
           <label>Criar Personagem</label>
         </div>
-        <div className="div">
+        <div className="div" onClick={() => navigate('/myChar')}>
           <label>Meus Personagens</label>
         </div>
         <div className="div">

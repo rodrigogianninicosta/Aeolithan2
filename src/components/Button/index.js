@@ -9,6 +9,7 @@ export default function Button(props) {
   }
 
   const after = () => {
+    props.afterAction()
     navigate(props.after)
   }
 
@@ -28,7 +29,7 @@ export default function Button(props) {
           after()
         }}
       >
-        <label>Criar</label>
+        <label>{props.text}</label>
       </div>
     </div>
   )

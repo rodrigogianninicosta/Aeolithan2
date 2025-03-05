@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import PreHome from './pages/PreHome'
 import Home from './pages/Home'
 import CreateChar from './pages/CreateChar'
+import MyChar from './pages/MyChar'
 import './styles/colors.css'
 import './styles/global-div.css'
 import './styles/global-label.css'
@@ -33,6 +34,14 @@ export default function App() {
           element={
             <div className="mainscreen">
               <CreateChar />
+            </div>
+          }
+        />
+        <Route
+          path="/myChar"
+          element={
+            <div className="mainscreen">
+              <MyChar />
             </div>
           }
         />

@@ -1,19 +1,17 @@
 import { useState, useEffect } from 'react'
 import { getCharacters } from '../../api/get'
-import { postCharacters } from '../../api/post'
 import './style.css'
 import Button from '../../components/Button'
 import PutArrows from '../../components/PutArrows'
 import Title from '../../components/Title'
 import Subtitle from '../../components/Subtitle'
 
-export default function SelectChar() {
+export default function MyChar() {
   const [characters, setCharacters] = useState([])
 
   useEffect(() => {
-    localStorage.removeItem('charInfo')
     const getCustomers = async () => {
-      const data = await getCharacters('')
+      const data = await getCharacters('123')
       if (data) {
         setCharacters(data)
       }
@@ -21,7 +19,7 @@ export default function SelectChar() {
     getCustomers()
   }, [])
 
-  const cardsQuantity = 3
+  const cardsQuantity = 6
   const [startIndex, setStartIndex] = useState(0)
   const visibleCharacters = characters.slice(
     startIndex,
@@ -65,16 +63,11 @@ export default function SelectChar() {
   return (
     <div className="main-div">
       <Title />
-      <Subtitle message="Selecione o seu personagem" />
-      <div className="select-char">
+      <Subtitle message="Escolha o seu personagem" />
+      <div className="my-char">
         <PutArrows Core={visibleCharacters} next={next} prev={prev} />
       </div>
-      <Button
-        before="/home"
-        after="/home"
-        text={'criar'}
-        afterAction={() => postCharacters('123')}
-      />
+      <Button before="/home" after="/home" text={'escolha'} />
     </div>
   )
 }
