@@ -18,7 +18,7 @@
   height: 60%;
 }
 .ladino2 .char img {
-  height: 75%;
+  height: 72%;
 }
 
 .sacerdote1 .char img {
@@ -44,10 +44,12 @@
 }
 
 .bobo1 .char img {
-  height: 70%;
+  height: 75%;
+  width: 115%;
 }
 .bobo2 .char img {
-  height: 70%;
+  height: 85%;
+  width: 125%;
 }
 
 .infectado1 .char img {

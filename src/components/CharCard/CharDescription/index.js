@@ -32,40 +32,45 @@ export default function CharDescription(props) {
         <label>{props.classType}</label>
       </div>
       <div className="icon-bar">
-        <label className="icon" onClick={() => handleIconClick('world')}>
+        <div className="icon" onClick={() => handleIconClick('world')}>
           <img src={`/images/icons/world.svg`} alt={'world'} />
-        </label>
-        <label className="icon" onClick={() => handleIconClick('book')}>
+        </div>
+        <div className="icon" onClick={() => handleIconClick('book')}>
           <img src={`/images/icons/book.svg`} alt={'book'} />
-        </label>
-        <label className="icon" onClick={() => handleIconClick('search')}>
+        </div>
+        <div className="icon" onClick={() => handleIconClick('search')}>
           <img src={`/images/icons/search.svg`} alt={'search'} />
-        </label>
-        <label className="icon" onClick={() => handleIconClick('power')}>
+        </div>
+        <div className="icon" onClick={() => handleIconClick('power')}>
           <img src={`/images/icons/power.svg`} alt={'power'} />
-        </label>
+        </div>
       </div>
       <div className="evolution">
-        <label
+        <div
           onClick={() => {
             props.setEvolution(1)
           }}
         >
           <img src={`/images/icons/rookie.svg`} alt={'rookie'} />
-        </label>
-        <label
+        </div>
+        <div
           onClick={() => {
             props.setEvolution(2)
           }}
         >
           <img src={`/images/icons/champion.svg`} alt={'champion'} />
-        </label>
-      </div>
-      {selectedIcon === 'world' && (
-        <div className="world-div">
-          <p>This is the World Div</p>
         </div>
-      )}
+      </div>
+      <div className="evolution">
+        <div
+          onClick={() => {
+            props.setEvolution(1)
+          }}
+        >
+          <img src={`/images/icons/delete.svg`} alt={'delete'} />
+        </div>
+      </div>
+      {selectedIcon === 'world' && <div className="world-div"></div>}
       {selectedIcon === 'book' && (
         <div className="book-div">
           {infoData.map((item, index) => (
@@ -86,11 +91,7 @@ export default function CharDescription(props) {
           ))}
         </div>
       )}
-      {selectedIcon === 'power' && (
-        <div className="power-div">
-          <p>This is the power Div</p>
-        </div>
-      )}
+      {selectedIcon === 'power' && <div className="power-div"></div>}
     </div>
   )
 }
