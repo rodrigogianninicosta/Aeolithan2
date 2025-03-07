@@ -7,8 +7,14 @@ export const postCharacters = async (playerId) => {
       'http://localhost:8080/character',
       [
         {
+          name: storedCharInfo.name,
+          imageName: storedCharInfo.imageName,
+          currentEvolution: storedCharInfo.currentEvolution,
           classType: storedCharInfo.classType,
           race: storedCharInfo.race,
+          level: storedCharInfo.level,
+          currentExp: storedCharInfo.currentExp,
+          nextLevelExp: storedCharInfo.nextLevelExp,
           health: storedCharInfo.health,
           attack: storedCharInfo.attack,
           magic: storedCharInfo.magic,

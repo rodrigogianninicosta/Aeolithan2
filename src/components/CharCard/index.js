@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react'
 import './style.css'
 import './char.css'
-import CharDescription from './CharDescription'
+import './description.css'
+import IconBar from './IconBar'
+import EvolutionBar from './EvolutionBar'
+import DeleteBar from './DeleteBar'
+import IconContent from './IconContent'
 
 export default function CharCard(props) {
-  const [evolution, setEvolution] = useState(1)
+  const [evolution, setEvolution] = useState(props.currentEvolution)
   const [loaded, setLoaded] = useState(false)
+  const [selectedIcon, setSelectedIcon] = useState('')
 
   useEffect(() => {
     const evolutions = [1, 2]
@@ -27,10 +32,10 @@ export default function CharCard(props) {
 
   return (
     <button className="wrapper" onClick={clickFunction}>
-      <div className={`char-card ${props.classType + evolution}`}>
+      <div className={`char-card ${props.imageName + evolution}`}>
         <div className="background">
           <img
-            src={`/images/background/${props.classType + evolution}.jpg`}
+            src={`/images/background/${props.imageName + evolution}.jpg`}
             alt="background"
             onLoad={() => setLoaded(true)}
             style={{
@@ -39,12 +44,9 @@ export default function CharCard(props) {
             }}
           />
         </div>
-        <div className="frame">
-          <img src={`/images/frame/darkCard3.png`} alt="frame" />
-        </div>
         <div className="char">
           <img
-            src={`/images/character/${props.classType + evolution}.png`}
+            src={`/images/character/${props.imageName + evolution}.png`}
             alt="char"
             onLoad={() => setLoaded(true)}
             style={{
@@ -53,7 +55,24 @@ export default function CharCard(props) {
             }}
           />
         </div>
-        <CharDescription setEvolution={setEvolution} {...props} />
+        <div className="description">
+          <div className="name">
+            <label>{props.classType}</label>
+          </div>
+          <IconBar
+            selectedIcon={selectedIcon}
+            setSelectedIcon={setSelectedIcon}
+          />
+          {props.exibition ? (
+            <EvolutionBar
+              setEvolution={setEvolution}
+              currentEvolution={props.currentEvolution}
+            />
+          ) : (
+            <DeleteBar id={props.id} />
+          )}
+          <IconContent selectedIcon={selectedIcon} {...props} />
+        </div>
       </div>
     </button>
   )

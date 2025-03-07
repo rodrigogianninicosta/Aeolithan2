@@ -1,55 +1,54 @@
-.guerreiro1 .char img {
+.warrior1 .char img {
   height: 60%;
 }
-.guerreiro2 .char img {
+.warrior2 .char img {
   height: 82%;
   width: 150%;
   padding-right: 25%;
 }
 
-.mago1 .char img {
+.darkMage1 .char img {
   height: 57%;
 }
-.mago2 .char img {
+.darkMage2 .char img {
   height: 75%;
 }
 
-.ladino1 .char img {
+.rogue1 .char img {
   height: 60%;
 }
-.ladino2 .char img {
+.rogue2 .char img {
   height: 72%;
 }
 
-.sacerdote1 .char img {
+.priest1 .char img {
   height: 65%;
 }
-.sacerdote2 .char img {
+.priest2 .char img {
   height: 68%;
 }
 
-.piromante1 .char img {
+.fireMage1 .char img {
   height: 60%;
 }
-.piromante2 .char img {
+.fireMage2 .char img {
   height: 73%;
 }
 
-.lobisomem1 .char img {
+.werewolf1 .char img {
   height: 50%;
 }
-.lobisomem2 .char img {
+.werewolf2 .char img {
   height: 90%;
   width: 140%;
 }
 
-.bobo1 .char img {
-  height: 75%;
-  width: 115%;
+.jester1 .char img {
+  height: 70%;
 }
-.bobo2 .char img {
-  height: 85%;
-  width: 125%;
+.jester2 .char img {
+  height: 75%;
+  padding-right: 25%;
 }
 
 .infectado1 .char img {

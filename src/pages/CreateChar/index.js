@@ -67,7 +67,13 @@ export default function SelectChar() {
       <Title />
       <Subtitle message="Selecione o seu personagem" />
       <div className="select-char">
-        <PutArrows Core={visibleCharacters} next={next} prev={prev} />
+        <PutArrows
+          Core={visibleCharacters}
+          next={next}
+          prev={prev}
+          startIndex={startIndex}
+          exibition={true}
+        />
       </div>
       <Button
         before="/home"

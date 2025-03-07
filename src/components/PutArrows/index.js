@@ -10,9 +10,8 @@ export default function PutArrows(props) {
       {props.Core.map((char, index) => (
         <CharCard
           key={`${char.character}-${index}`}
-          id={'?'}
-          level={'1'}
-          exp={'0'}
+          position={props.startIndex + index + 1}
+          exibition={props.exibition}
           {...char}
         />
       ))}

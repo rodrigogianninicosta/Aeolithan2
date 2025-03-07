@@ -65,7 +65,12 @@ export default function MyChar() {
       <Title />
       <Subtitle message="Escolha o seu personagem" />
       <div className="my-char">
-        <PutArrows Core={visibleCharacters} next={next} prev={prev} />
+        <PutArrows
+          Core={visibleCharacters}
+          next={next}
+          prev={prev}
+          startIndex={startIndex}
+        />
       </div>
       <Button before="/home" after="/home" text={'escolha'} />
     </div>
