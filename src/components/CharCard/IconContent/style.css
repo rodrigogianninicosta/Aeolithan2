@@ -32,7 +32,7 @@
 .book-div label,
 .search-div label {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 1em;
+  font-size: min(0.8vw, 0.7rem);
   color: white;
 }
 

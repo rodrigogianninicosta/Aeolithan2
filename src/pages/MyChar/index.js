@@ -19,7 +19,7 @@ export default function MyChar() {
     getCustomers()
   }, [])
 
-  const cardsQuantity = 6
+  const cardsQuantity = 5
   const [startIndex, setStartIndex] = useState(0)
   const visibleCharacters = characters.slice(
     startIndex,

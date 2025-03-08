@@ -3,14 +3,13 @@
 }
 .warrior2 .char img {
   height: 82%;
-  width: 150%;
-  padding-right: 25%;
+  padding-right: 28%;
 }
 
-.darkMage1 .char img {
+.necromancer1 .char img {
   height: 57%;
 }
-.darkMage2 .char img {
+.necromancer2 .char img {
   height: 75%;
 }
 
@@ -18,7 +17,7 @@
   height: 60%;
 }
 .rogue2 .char img {
-  height: 72%;
+  height: 70%;
 }
 
 .priest1 .char img {
@@ -39,8 +38,7 @@
   height: 50%;
 }
 .werewolf2 .char img {
-  height: 90%;
-  width: 140%;
+  height: 80%;
 }
 
 .jester1 .char img {
@@ -51,19 +49,9 @@
   padding-right: 25%;
 }
 
-.infectado1 .char img {
-  height: 70%;
+.vampire1 .char img {
+  height: 65%;
 }
-.infectado2 .char img {
-  height: 85%;
-}
-
-.batedor1 .char img {
-  height: 55%;
-  width: 90%;
-}
-.batedor2 .char img {
-  height: 85%;
-  width: 130%;
-  padding-right: 10%;
+.vampire2 .char img {
+  height: 75%;
 }
