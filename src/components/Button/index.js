@@ -9,7 +9,9 @@ export default function Button(props) {
   }
 
   const after = () => {
-    props.afterAction()
+    if (props.afterAction) {
+      props.afterAction()
+    }
     navigate(props.after)
   }
 

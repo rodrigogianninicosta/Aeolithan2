@@ -3,6 +3,7 @@ import PreHome from './pages/PreHome'
 import Home from './pages/Home'
 import CreateChar from './pages/CreateChar'
 import MyChar from './pages/MyChar'
+import StartAdventure from './pages/StartAdventure'
 import './styles/colors.css'
 import './styles/global-div.css'
 import './styles/global-label.css'
@@ -42,6 +43,14 @@ export default function App() {
           element={
             <div className="mainscreen">
               <MyChar />
+            </div>
+          }
+        />
+        <Route
+          path="/startAdventure"
+          element={
+            <div className="mainscreen">
+              <StartAdventure />
             </div>
           }
         />

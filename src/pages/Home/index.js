@@ -9,7 +9,7 @@ export default function Home() {
     <div className="main-div main-title">
       <Title />
       <div className="start">
-        <div className="div">
+        <div className="div" onClick={() => navigate('/startAdventure')}>
           <label>Iniciar Aventura</label>
         </div>
         <div className="div" onClick={() => navigate('/createChar')}>

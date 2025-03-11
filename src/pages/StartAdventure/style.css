@@ -1,0 +1,17 @@
+.adventure-char {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 1rem;
+
+  animation: shake-soft 0.8s infinite;
+}
+
+.adventure-char .wrapper {
+  width: 100%;
+}

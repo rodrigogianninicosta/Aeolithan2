@@ -10,6 +10,9 @@ export default function MyChar() {
   const [characters, setCharacters] = useState([])
 
   useEffect(() => {
+    localStorage.removeItem('party1')
+    localStorage.removeItem('party2')
+    localStorage.removeItem('party3')
     const getCustomers = async () => {
       const data = await getCharacters('123')
       if (data) {
@@ -70,6 +73,7 @@ export default function MyChar() {
           next={next}
           prev={prev}
           startIndex={startIndex}
+          clickFunction={2}
         />
       </div>
       <Button before="/home" after="/home" text={'escolha'} />

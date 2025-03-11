@@ -27,7 +27,17 @@ export default function CharCard(props) {
   }, [evolution])
 
   const clickFunction = () => {
-    localStorage.setItem('charInfo', JSON.stringify({ ...props }))
+    if (props.clickFunction === 1) {
+      localStorage.setItem('charInfo', JSON.stringify({ ...props }))
+    } else if (props.clickFunction === 2) {
+      if (localStorage.getItem('party1') && !localStorage.getItem('party2')) {
+        localStorage.setItem('party2', JSON.stringify({ ...props }))
+      } else if (localStorage.getItem('party2')) {
+        localStorage.setItem('party3', JSON.stringify({ ...props }))
+      } else {
+        localStorage.setItem('party1', JSON.stringify({ ...props }))
+      }
+    }
   }
 
   return (
@@ -63,7 +73,7 @@ export default function CharCard(props) {
             selectedIcon={selectedIcon}
             setSelectedIcon={setSelectedIcon}
           />
-          {props.exibition ? (
+          {props.evolution ? (
             <EvolutionBar
               setEvolution={setEvolution}
               currentEvolution={props.currentEvolution}
