@@ -1,0 +1,25 @@
+.battle {
+  justify-content: space-between !important;
+  padding-bottom: 0.2%;
+  padding-top: 0.2%;
+}
+
+.battle-cards {
+  background: red;
+  width: 50%;
+  height: 40%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 0.3rem;
+
+  animation: shake-soft 0.8s infinite;
+}
+
+.battle-cards .wrapper {
+  width: 20%;
+  height: 100%;
+}

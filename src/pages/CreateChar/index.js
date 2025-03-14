@@ -73,7 +73,6 @@ export default function SelectChar() {
           prev={prev}
           startIndex={startIndex}
           evolution={true}
-          clickFunction={1}
         />
       </div>
       <Button

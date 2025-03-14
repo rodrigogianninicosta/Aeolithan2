@@ -3,6 +3,9 @@ import './style.css'
 export default function IconBar(props) {
   const handleIconClick = (icon) => {
     props.setSelectedIcon(props.selectedIcon === icon ? '' : icon)
+    if (icon === 'power') {
+      props.setDamage(10)
+    }
   }
 
   return (

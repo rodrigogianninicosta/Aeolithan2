@@ -1,4 +1,4 @@
-.adventure-char {
+.start-adventure {
   width: 50%;
   height: 100%;
 
@@ -12,6 +12,6 @@
   animation: shake-soft 0.8s infinite;
 }
 
-.adventure-char .wrapper {
+.start-adventure .wrapper {
   width: 100%;
 }

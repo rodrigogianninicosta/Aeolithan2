@@ -73,7 +73,6 @@ export default function MyChar() {
           next={next}
           prev={prev}
           startIndex={startIndex}
-          clickFunction={2}
         />
       </div>
       <Button before="/home" after="/home" text={'escolha'} />

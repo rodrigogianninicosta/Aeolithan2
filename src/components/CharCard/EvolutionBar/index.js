@@ -3,20 +3,20 @@ import './style.css'
 export default function EvolutionBar(props) {
   return (
     <div className="smaller-bar">
-      <div
+      <img
         onClick={() => {
           props.setEvolution(props.currentEvolution)
         }}
-      >
-        <img src={`/images/icons/rookie.svg`} alt={'rookie'} />
-      </div>
-      <div
+        src={`/images/icons/rookie.svg`}
+        alt={'rookie'}
+      />
+      <img
         onClick={() => {
           props.setEvolution(2)
         }}
-      >
-        <img src={`/images/icons/champion.svg`} alt={'champion'} />
-      </div>
+        src={`/images/icons/champion.svg`}
+        alt={'champion'}
+      />
     </div>
   )
 }

@@ -1,16 +1,15 @@
-import { postCharacters } from '../../api/post'
 import './style.css'
 import Button from '../../components/Button'
 import Title from '../../components/Title'
 import Subtitle from '../../components/Subtitle'
 import CharCard from '../../components/CharCard'
 
-export default function SelectChar() {
+export default function StartAdventure() {
   return (
     <div className="main-div">
       <Title />
       <Subtitle message="Confirme seu time" />
-      <div className="adventure-char">
+      <div className="start-adventure">
         <CharCard
           key={`1`}
           evolution={true}
@@ -27,12 +26,7 @@ export default function SelectChar() {
           {...JSON.parse(localStorage.getItem('party3'))}
         />
       </div>
-      <Button
-        before="/home"
-        after="/home"
-        text={'criar'}
-        afterAction={() => postCharacters('123')}
-      />
+      <Button before="/home" after="/battle" text={'iniciar'} />
     </div>
   )
 }

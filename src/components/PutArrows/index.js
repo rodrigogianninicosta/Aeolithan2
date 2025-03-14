@@ -12,7 +12,6 @@ export default function PutArrows(props) {
           key={`${char.character}-${index}`}
           position={props.startIndex + index + 1}
           evolution={props.evolution}
-          clickFunction={props.clickFunction}
           {...char}
         />
       ))}
