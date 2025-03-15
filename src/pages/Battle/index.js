@@ -74,14 +74,6 @@ export default function Battle() {
   return (
     <div className="main-div battle">
       <div className="battle-cards">
-        <CharCard key={`0`} {...enemy} bar={null} battleMode={true} />
-      </div>
-      <div className="mid-battle-div">
-        <Button before="/home" />
-        <div className="battle-div"></div>
-        <div className="info-battle-div"></div>
-      </div>
-      <div className="battle-cards">
         <CharCard
           key={`1`}
           setDamage={setDamage1}
@@ -103,6 +95,14 @@ export default function Battle() {
           bar={null}
           battleMode={true}
         />
+      </div>
+      <div className="mid-battle-div">
+        <div className="info-battle-div"></div>
+        <div className="battle-div"></div>
+        <Button before="/home" />
+      </div>
+      <div className="battle-cards">
+        <CharCard key={`0`} {...enemy} bar={null} battleMode={true} />
       </div>
     </div>
   )

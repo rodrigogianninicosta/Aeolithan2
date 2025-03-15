@@ -19,6 +19,10 @@
   opacity: 40%;
 }
 
+.ultimate .char {
+  opacity: 75%;
+}
+
 .ultimate .description {
   z-index: -1;
 }
