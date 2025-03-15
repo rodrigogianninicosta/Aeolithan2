@@ -23,16 +23,18 @@ export default function Button(props) {
           before()
         }}
       >
-        <label>Voltar</label>
+        <label>Return</label>
       </div>
-      <div
-        className="div"
-        onClick={() => {
-          after()
-        }}
-      >
-        <label>{props.text}</label>
-      </div>
+      {props.afterButton === true ? (
+        <div
+          className="div"
+          onClick={() => {
+            after()
+          }}
+        >
+          <label>{props.text}</label>
+        </div>
+      ) : null}
     </div>
   )
 }

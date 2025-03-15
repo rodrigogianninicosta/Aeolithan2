@@ -10,19 +10,19 @@ export default function Home() {
       <Title />
       <div className="start">
         <div className="div" onClick={() => navigate('/startAdventure')}>
-          <label>Iniciar Aventura</label>
+          <label>Start adventure</label>
+        </div>
+        <div className="div" onClick={() => navigate('/buildParty')}>
+          <label>Build your party</label>
         </div>
         <div className="div" onClick={() => navigate('/createChar')}>
-          <label>Criar Personagem</label>
+          <label>Create character</label>
         </div>
-        <div className="div" onClick={() => navigate('/myChar')}>
-          <label>Meus Personagens</label>
-        </div>
-        <div className="div">
-          <label>Alterar Mundo</label>
+        <div className="div" onClick={() => localStorage.clear()}>
+          <label>Change world</label>
         </div>
         <div className="div" onClick={() => navigate('/')}>
-          <label>Voltar</label>
+          <label>Return</label>
         </div>
       </div>
     </div>

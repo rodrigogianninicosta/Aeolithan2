@@ -11,7 +11,8 @@ export default function PutArrows(props) {
         <CharCard
           key={`${char.character}-${index}`}
           position={props.startIndex + index + 1}
-          evolution={props.evolution}
+          bar={props.bar}
+          battleMode={props.battleMode}
           {...char}
         />
       ))}

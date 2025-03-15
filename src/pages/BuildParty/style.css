@@ -13,3 +13,7 @@
 .my-char .wrapper {
   width: 16.5%;
 }
+
+.my-char .description {
+  z-index: 3;
+}

@@ -1,16 +1,19 @@
 import { useState, useEffect } from 'react'
 import './style.css'
 import './char.css'
+import './enemy.css'
 import './description.css'
+import './ultimate.css'
 import IconBar from './IconBar'
 import EvolutionBar from './EvolutionBar'
 import DeleteBar from './DeleteBar'
 import IconContent from './IconContent'
 
 export default function CharCard(props) {
-  const [evolution, setEvolution] = useState(props.currentEvolution)
+  const [evolution, setEvolution] = useState(props.currentEvolution || 1)
   const [loaded, setLoaded] = useState(false)
   const [selectedIcon, setSelectedIcon] = useState('')
+  const [ultimateForm, setUltimateForm] = useState('')
 
   useEffect(() => {
     const evolutions = [1, 2]
@@ -31,9 +34,9 @@ export default function CharCard(props) {
   }
 
   return (
-    <button className="wrapper" onClick={clickFunction}>
+    <button className={`wrapper ${ultimateForm}`} onClick={clickFunction}>
       <div className={`char-card ${props.imageName + evolution}`}>
-        <div className="background">
+        <div className={`background`}>
           <img
             src={`/images/background/${props.imageName + evolution}.jpg`}
             alt="background"
@@ -63,15 +66,17 @@ export default function CharCard(props) {
             selectedIcon={selectedIcon}
             setSelectedIcon={setSelectedIcon}
             setDamage={props.setDamage}
+            battleMode={props.battleMode}
           />
-          {props.evolution ? (
+          {props.bar === 'evolution' ? (
             <EvolutionBar
               setEvolution={setEvolution}
+              setUltimateForm={setUltimateForm}
               currentEvolution={props.currentEvolution}
             />
-          ) : (
-            <DeleteBar id={props.id} />
-          )}
+          ) : props.bar === 'delete' ? (
+            <DeleteBar {...props} />
+          ) : null}
           <IconContent selectedIcon={selectedIcon} {...props} />
         </div>
       </div>

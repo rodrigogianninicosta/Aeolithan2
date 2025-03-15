@@ -7,12 +7,15 @@ export default function CharDescription(props) {
     { label: 'name', value: props.name },
     { label: 'class', value: props.classType },
     { label: 'race', value: props.race },
+    { label: 'collection', value: props.collection },
+    { label: 'alignment', value: props.alignment },
     { label: 'level', value: props.level },
     { label: 'exp', value: `${props.currentExp}/${props.nextLevelExp}` },
   ]
 
   const statusData = [
-    { label: 'health', value: props.health },
+    { label: 'health', value: `${props.totalHealth}` },
+    { label: 'mana', value: `${props.totalMana}` },
     { label: 'attack', value: props.attack },
     { label: 'magic', value: props.magic },
     { label: 'defense', value: props.defense },

@@ -6,17 +6,21 @@ export default function DeleteBar(props) {
     const parties = ['party1', 'party2', 'party3']
     for (const party of parties) {
       const storedItem = localStorage.getItem(party)
-      console.log(localStorage.getItem(party))
       if (storedItem) {
-        localStorage.removeItem(party)
-        return
+        try {
+          const item = JSON.parse(storedItem)
+          if (item.id === props.id) {
+            localStorage.removeItem(party)
+            return
+          }
+        } catch (error) {
+          console.error(`Error parsing localStorage item for ${party}`, error)
+        }
       }
     }
-    for (const party of parties) {
-      if (!localStorage.getItem(party)) {
-        localStorage.setItem(party, JSON.stringify(props))
-        break
-      }
+    const emptySlot = parties.find((party) => !localStorage.getItem(party))
+    if (emptySlot) {
+      localStorage.setItem(emptySlot, JSON.stringify(props))
     }
   }
   return (
@@ -26,7 +30,7 @@ export default function DeleteBar(props) {
         onClick={() => {
           clickFunction()
         }}
-        src={`/images/icons/music_off.svg`}
+        src={`/images/icons/party.svg`}
         alt={'teamup'}
       />
       <img
@@ -34,7 +38,7 @@ export default function DeleteBar(props) {
         onClick={() => {
           deleteCharacters(props.id)
         }}
-        src={`/images/icons/delete.svg`}
+        src={`/images/icons/kill.svg`}
         alt={'delete'}
       />
     </div>

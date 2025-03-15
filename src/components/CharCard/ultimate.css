@@ -1,0 +1,60 @@
+.ultimate,
+.ultimate:hover,
+.ultimate:focus {
+  background: var(--gold-color);
+  animation: gradient 5s ease infinite;
+  background-size: 400% 400%;
+  padding: 1%;
+}
+
+.ultimate:hover {
+  box-shadow: 0px 0px 5px 5px darkgoldenrod;
+}
+
+.ultimate:focus {
+  box-shadow: 0px 0px 10px 10px darkgoldenrod;
+}
+
+.ultimate .background {
+  opacity: 40%;
+}
+
+.ultimate .description {
+  z-index: -1;
+}
+
+.ultimate label {
+  color: gold !important;
+}
+
+.ultimate .icon {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(47%) saturate(1500%)
+    hue-rotate(10deg) brightness(90%) contrast(120%);
+}
+
+.ultimate .icon:hover {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(38%) saturate(4816%)
+    hue-rotate(356deg) brightness(102%) contrast(105%);
+}
+
+.ultimate .smaller-bar,
+.ultimate .icon-bar {
+  box-shadow: 0px 0px 0px 0.5px gold;
+}
+
+.ultimate .name,
+.ultimate .icon-bar,
+.ultimate .smaller-bar {
+  background: var(--gold-light-color);
+  animation: gradient 10s ease infinite;
+  background-size: 400% 400%;
+}
+
+.ultimate .world-div,
+.ultimate .book-div,
+.ultimate .search-div,
+.ultimate .power-div {
+  background: var(--gold-dark-color);
+  animation: gradient 10s ease infinite;
+  background-size: 400% 400%;
+}

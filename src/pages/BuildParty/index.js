@@ -6,15 +6,12 @@ import PutArrows from '../../components/PutArrows'
 import Title from '../../components/Title'
 import Subtitle from '../../components/Subtitle'
 
-export default function MyChar() {
+export default function BuildTeam() {
   const [characters, setCharacters] = useState([])
 
   useEffect(() => {
-    localStorage.removeItem('party1')
-    localStorage.removeItem('party2')
-    localStorage.removeItem('party3')
     const getCustomers = async () => {
-      const data = await getCharacters('123')
+      const data = await getCharacters('123', 'neutral')
       if (data) {
         setCharacters(data)
       }
@@ -66,16 +63,18 @@ export default function MyChar() {
   return (
     <div className="main-div">
       <Title />
-      <Subtitle message="Escolha o seu personagem" />
+      <Subtitle message="Build your party" />
       <div className="my-char">
         <PutArrows
           Core={visibleCharacters}
           next={next}
           prev={prev}
           startIndex={startIndex}
+          bar={'delete'}
+          battleMode={false}
         />
       </div>
-      <Button before="/home" after="/home" text={'escolha'} />
+      <Button before="/home" />
     </div>
   )
 }

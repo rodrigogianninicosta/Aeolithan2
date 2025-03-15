@@ -9,7 +9,7 @@ export default function PreHome() {
     <div className="main-div main-title">
       <Title />
       <div className="pre-home">
-        <label onClick={() => navigate('/home')}>Clique para iniciar</label>
+        <label onClick={() => navigate('/home')}>Click to start</label>
       </div>
     </div>
   )

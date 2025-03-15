@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
+import { getCharacters } from '../../api/get'
 import './style.css'
 import CharCard from '../../components/CharCard'
+import Button from '../../components/Button'
 
 export default function Battle() {
-  const [enemy, setEnemy] = useState(JSON.parse(localStorage.getItem('party1')))
+  const [enemy, setEnemy] = useState([])
   const [char1, setChar1] = useState(JSON.parse(localStorage.getItem('party1')))
   const [char2, setChar2] = useState(JSON.parse(localStorage.getItem('party2')))
   const [char3, setChar3] = useState(JSON.parse(localStorage.getItem('party3')))
@@ -12,23 +14,33 @@ export default function Battle() {
   const [damage3, setDamage3] = useState(0)
 
   useEffect(() => {
+    const getCustomers = async () => {
+      const data = await getCharacters('', 'evil')
+      if (data) {
+        setEnemy(data[0])
+      }
+    }
+    getCustomers()
+  }, [])
+
+  useEffect(() => {
     setEnemy((prevEnemy) => ({
       ...prevEnemy,
-      health: prevEnemy.health - damage1,
+      totalHealth: prevEnemy.totalHealth - damage1,
     }))
   }, [damage1])
 
   useEffect(() => {
     setEnemy((prevEnemy) => ({
       ...prevEnemy,
-      health: prevEnemy.health - damage2,
+      totalHealth: prevEnemy.totalHealth - damage2,
     }))
   }, [damage2])
 
   useEffect(() => {
     setEnemy((prevEnemy) => ({
       ...prevEnemy,
-      health: prevEnemy.health - damage3,
+      totalHealth: prevEnemy.totalHealth - damage3,
     }))
   }, [damage3])
 
@@ -39,17 +51,17 @@ export default function Battle() {
       if (randomIndex === 0) {
         setChar1((prevChar) => ({
           ...prevChar,
-          health: prevChar.health - 10,
+          totalHealth: prevChar.totalHealth - 10,
         }))
       } else if (randomIndex === 1) {
         setChar2((prevChar) => ({
           ...prevChar,
-          health: prevChar.health - 10,
+          totalHealth: prevChar.totalHealth - 10,
         }))
       } else {
         setChar3((prevChar) => ({
           ...prevChar,
-          health: prevChar.health - 10,
+          totalHealth: prevChar.totalHealth - 10,
         }))
       }
 
@@ -62,26 +74,34 @@ export default function Battle() {
   return (
     <div className="main-div battle">
       <div className="battle-cards">
-        <CharCard key={`0`} evolution={true} {...enemy} />
+        <CharCard key={`0`} {...enemy} bar={null} battleMode={true} />
+      </div>
+      <div className="mid-battle-div">
+        <Button before="/home" />
+        <div className="battle-div"></div>
+        <div className="info-battle-div"></div>
       </div>
       <div className="battle-cards">
         <CharCard
           key={`1`}
-          evolution={true}
           setDamage={setDamage1}
           {...char1}
+          bar={null}
+          battleMode={true}
         />
         <CharCard
           key={`2`}
-          evolution={true}
           setDamage={setDamage2}
           {...char2}
+          bar={null}
+          battleMode={true}
         />
         <CharCard
           key={`3`}
-          evolution={true}
           setDamage={setDamage3}
           {...char3}
+          bar={null}
+          battleMode={true}
         />
       </div>
     </div>

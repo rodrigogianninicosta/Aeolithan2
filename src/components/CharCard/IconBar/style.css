@@ -1,5 +1,5 @@
 .icon-bar {
-  height: 5%;
+  min-height: 8%;
   box-shadow: 0px -0.5px 0px 0.1px var(--silver-color);
-  gap: 3rem;
+  gap: 10%;
 }

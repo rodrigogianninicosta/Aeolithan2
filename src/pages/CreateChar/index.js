@@ -13,7 +13,7 @@ export default function SelectChar() {
   useEffect(() => {
     localStorage.removeItem('charInfo')
     const getCustomers = async () => {
-      const data = await getCharacters('')
+      const data = await getCharacters('', 'neutral')
       if (data) {
         setCharacters(data)
       }
@@ -65,21 +65,23 @@ export default function SelectChar() {
   return (
     <div className="main-div">
       <Title />
-      <Subtitle message="Selecione o seu personagem" />
+      <Subtitle message="Create character" />
       <div className="select-char">
         <PutArrows
           Core={visibleCharacters}
           next={next}
           prev={prev}
           startIndex={startIndex}
-          evolution={true}
+          bar={'evolution'}
+          battleMode={false}
         />
       </div>
       <Button
         before="/home"
         after="/home"
-        text={'criar'}
+        text={'Create'}
         afterAction={() => postCharacters('123')}
+        afterButton={true}
       />
     </div>
   )

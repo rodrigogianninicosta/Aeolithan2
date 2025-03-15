@@ -10,14 +10,18 @@ export default function IconBar(props) {
 
   return (
     <div className="icon-bar">
-      <div className="icon" onClick={() => handleIconClick('world')}>
-        <img src={`/images/icons/world.svg`} alt={'world'} />
-      </div>
-      <div className="icon" onClick={() => handleIconClick('book')}>
-        <img src={`/images/icons/book.svg`} alt={'book'} />
-      </div>
+      {props.battleMode === false ? (
+        <>
+          <div className="icon" onClick={() => handleIconClick('world')}>
+            <img src={`/images/icons/world.svg`} alt="world" />
+          </div>
+          <div className="icon" onClick={() => handleIconClick('book')}>
+            <img src={`/images/icons/book.svg`} alt="book" />
+          </div>
+        </>
+      ) : null}
       <div className="icon" onClick={() => handleIconClick('search')}>
-        <img src={`/images/icons/search.svg`} alt={'search'} />
+        <img src={`/images/icons/lens.svg`} alt={'search'} />
       </div>
       <div className="icon" onClick={() => handleIconClick('power')}>
         <img src={`/images/icons/power.svg`} alt={'power'} />

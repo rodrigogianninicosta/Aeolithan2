@@ -4,7 +4,21 @@
   --dark-blue-color: rgba(10, 15, 41, 0.8);
   --dark-blue-hover-color: rgba(10, 15, 41, 0.5);
   --opacity-black-color: rgba(0, 0, 0, 0.5);
+  --opacity-gold-color: rgba(184, 134, 11, 0.8);
   --less-opacity-black-color: rgba(0, 0, 0, 0.9);
+  --gold-color: linear-gradient(-135deg, darkgoldenrod, black, gold);
+  --gold-light-color: linear-gradient(
+    -135deg,
+    rgba(184, 134, 11, 0.8),
+    rgba(0, 0, 0, 0.2),
+    rgba(184, 134, 11, 0.8)
+  );
+  --gold-dark-color: linear-gradient(
+    -135deg,
+    rgba(184, 134, 11, 0.9),
+    rgba(0, 0, 0, 0.7),
+    rgba(184, 134, 11, 0.9)
+  );
   --shiny-color: linear-gradient(
     -135deg,
     var(--dark-blue-color),
