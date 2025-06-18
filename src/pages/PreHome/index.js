@@ -10,6 +10,9 @@ export default function PreHome() {
       <Title />
       <div className="pre-home">
         <label onClick={() => navigate('/home')}>Click to start</label>
+        <div className="div start-button" onClick={() => navigate('/home')}>
+          <label>Start Game</label>
+        </div>
       </div>
     </div>
   )
